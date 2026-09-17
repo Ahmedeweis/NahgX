@@ -9,7 +9,7 @@
                 <div class="flex flex-col items-start justify-center max-w-xl">
 
                     <!-- Top Icon (< > Angle Brackets) -->
-                    <div v-if="showIcon" class="mb-6 sm:mb-8 text-black" aria-hidden="true">
+                    <div v-if="showIcon" class="mb-6 sm:mb-8 text-medical-navy-deep" aria-hidden="true">
                         <svg class="w-10 h-8 sm:w-11 sm:h-9" viewBox="0 0 44 32" fill="none" stroke="currentColor">
                             <path d="M14 6L4 16L14 26" stroke-width="3.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -20,12 +20,12 @@
 
                     <!-- Headline -->
                     <h1
-                        class="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-black tracking-tight leading-[1.18] mb-5 sm:mb-6">
+                        class="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-medical-navy-deep tracking-tight leading-[1.18] mb-5 sm:mb-6">
                         {{ title }}
                     </h1>
 
                     <!-- Description -->
-                    <p v-if="description" class="text-gray-600 text-base sm:text-[17px] leading-relaxed mb-8 sm:mb-10">
+                    <p v-if="description" class="text-medical-navy/80 text-base sm:text-[17px] leading-relaxed mb-8 sm:mb-10 font-normal">
                         {{ description }}
                     </p>
 
@@ -33,16 +33,16 @@
                     <div class="flex flex-wrap items-center gap-6">
                         <!-- Primary Outline Button -->
                         <a v-if="primaryBtnText" :href="primaryBtnLink"
-                            class="inline-flex items-center justify-center px-6 py-3 border border-black text-black font-medium text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-200 cursor-pointer select-none">
+                            class="inline-flex items-center justify-center px-6 py-3 border-2 border-medical-navy-deep text-medical-navy-deep font-bold text-sm sm:text-base bg-transparent hover:bg-medical-sky hover:border-medical-blue hover:text-medical-blue transition-all duration-200 cursor-pointer select-none">
                             {{ primaryBtnText }}
                         </a>
 
                         <!-- Secondary Text Link with Arrow -->
                         <a v-if="secondaryBtnText" :href="secondaryBtnLink"
-                            class="inline-flex items-center gap-2 text-black font-medium text-sm sm:text-base hover:opacity-75 transition-all group cursor-pointer select-none">
+                            class="inline-flex items-center gap-2 text-medical-navy-deep hover:text-medical-blue font-bold text-sm sm:text-base transition-colors group cursor-pointer select-none">
                             <span>{{ secondaryBtnText }}</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
-                                :class="{ 'rotate-180 group-hover:-translate-x-1': dir === 'rtl' }" fill="none"
+                            <svg class="w-4 h-4 text-medical-navy-deep group-hover:text-medical-blue transition-all duration-200"
+                                :class="{ 'rotate-180 group-hover:-translate-x-1': dir === 'rtl', 'group-hover:translate-x-1': dir !== 'rtl' }" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                     d="M9 5l7 7-7 7" />
@@ -81,6 +81,8 @@
 </template>
 
 <script setup>
+import imageSrc from '../assets/imgs/about.png'
+
 defineProps({
     title: {
         type: String,
