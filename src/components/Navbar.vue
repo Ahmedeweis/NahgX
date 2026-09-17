@@ -9,7 +9,7 @@
           </div>
           <div class="flex flex-col leading-tight">
             <span class="text-xl font-bold text-medical-navy-deep tracking-tight">نهج التنفيذ </span>
-            <span class="text-[13px] font-bold text-black mt-0.5">تمكين واستدامة القطاع الغير الربحي </span>
+            <span class="text-[13px] font-bold text-black mt-0.5">تمكين واستدامة القطاع غير الربحي </span>
           </div>
         </router-link>
 
@@ -37,9 +37,7 @@
 
           <!-- CTA Button (Desktop) -->
           <div class="hidden lg:flex items-center">
-            <button
-              @click="openConsultationModal"
-              type="button"
+            <button @click="openConsultationModal" type="button"
               class="group relative inline-flex items-center gap-2.5 px-7 py-3.5 bg-medical-navy-deep text-white font-bold text-[15px] rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
               <span class="relative z-10">احجز استشارة</span>
               <div
@@ -99,8 +97,7 @@
 
         <!-- Mobile CTA Button -->
         <div class="pt-4 mt-3 border-t border-medical-sky/70">
-          <button @click="isMobileMenuOpen = false; openConsultationModal()"
-            type="button"
+          <button @click="isMobileMenuOpen = false; openConsultationModal()" type="button"
             class="w-full flex items-center justify-center gap-2 py-3.5 bg-medical-navy-deep text-white font-bold text-[15px] rounded-xl shadow-md active:scale-[0.99] transition-all cursor-pointer hover:bg-medical-navy">
             <span>احجز استشارة</span>
             <svg class="w-4 h-4 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">

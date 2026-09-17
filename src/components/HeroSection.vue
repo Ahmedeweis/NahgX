@@ -35,7 +35,7 @@
                 </span>
                 <span
                   class="block text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-l from-medical-accent-light via-medical-blue to-medical-navy bg-clip-text text-transparent pb-1">
-                  المنظمات الغير الربحية
+                  المنظمات غير الربحية
                 </span>
               </h1>
 
