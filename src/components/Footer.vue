@@ -103,8 +103,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:info@nahg.com.sa" class="transition-colors hover:text-blue-400">
-                                    info@nahg.com.sa
+                                <a href="mailto:nahjaltanfith@gmail.com" class="transition-colors hover:text-blue-400">
+                                    nahjaltanfith@gmail.com
                                 </a>
                             </li>
                             <li class="pt-2">

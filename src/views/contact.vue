@@ -30,7 +30,6 @@
                         <!-- Contact Channels Grid -->
                         <div class="space-y-4">
 
-
                             <!-- Phone & WhatsApp -->
                             <div
                                 class="flex items-start gap-4 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm hover:border-black transition-all">
@@ -62,11 +61,10 @@
                                 </div>
                                 <div>
                                     <h3 class="text-base font-bold text-black mb-1">البريد الإلكتروني</h3>
-                                    <a href="mailto:info@nahg.com.sa"
+                                    <a href="mailto:nahjaltanfith@gmail.com"
                                         class="text-sm text-gray-700 hover:text-blue-600 transition-colors">
-                                        info@nahg.com.sa
+                                        nahjaltanfith@gmail.com
                                     </a>
-                                    <!-- <span class="text-xs text-gray-400 mt-1 block">للمراسلات الرسمية والشراكات</span> -->
                                 </div>
                             </div>
                         </div>
@@ -136,12 +134,17 @@
                                 <select v-model="form.service"
                                     class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:border-black transition-all">
                                     <option value="">اختر مجال الاستشارة أو الخدمة</option>
-                                    <option value="governance">معايير الحوكمة والامتثال (المركز الوطني)</option>
-                                    <option value="strategy">بناء وتطوير الخطة الاستراتيجية والتشغيلية</option>
-                                    <option value="sustainability">الاستدامة المالية وتأسيس المحافظ الوقفية</option>
-                                    <option value="digital">التحول الرقمي وتأسيس متجر التبرع السريع</option>
-                                    <option value="pmo">إدارة المبادرات والمكاتب التنفيذية (PMO)</option>
-                                    <option value="other">أخرى / استفسار عام</option>
+                                    <option value="معايير الحوكمة والامتثال (المركز الوطني)">معايير الحوكمة والامتثال
+                                        (المركز الوطني)</option>
+                                    <option value="بناء وتطوير الخطة الاستراتيجية والتشغيلية">بناء وتطوير الخطة
+                                        الاستراتيجية والتشغيلية</option>
+                                    <option value="الاستدامة المالية وتأسيس المحافظ الوقفية">الاستدامة المالية وتأسيس
+                                        المحافظ الوقفية</option>
+                                    <option value="التحول الرقمي وتأسيس متجر التبرع السريع">التحول الرقمي وتأسيس متجر
+                                        التبرع السريع</option>
+                                    <option value="إدارة المبادرات والمكاتب التنفيذية (PMO)">إدارة المبادرات والمكاتب
+                                        التنفيذية (PMO)</option>
+                                    <option value="أخرى / استفسار عام">أخرى / استفسار عام</option>
                                 </select>
                             </div>
 
@@ -171,6 +174,12 @@
                                 class="text-sm font-bold text-green-600 bg-green-50 p-4 rounded-xl border border-green-200">
                                 ✓ تم استلام رسالتك بنجاح، وسيتواصل معك مستشارنا قريباً.
                             </p>
+
+                            <!-- Error Alert -->
+                            <p v-if="errorMessage"
+                                class="text-sm font-bold text-red-600 bg-red-50 p-4 rounded-xl border border-red-200">
+                                ✕ {{ errorMessage }}
+                            </p>
                         </form>
                     </div>
 
@@ -193,6 +202,7 @@ import sectionHeader from '@/components/sectionHeader.vue'
 
 const isSubmitting = ref(false)
 const submitted = ref(false)
+const errorMessage = ref('')
 
 const form = reactive({
     name: '',
@@ -203,19 +213,47 @@ const form = reactive({
     message: ''
 })
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
     isSubmitting.value = true
+    submitted.value = false
+    errorMessage.value = ''
 
-    // محاكاة إرسال البيانات (يمكن ربطها بـ API)
-    setTimeout(() => {
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                access_key: 'a7841c52-dc40-485f-8abb-b67ae60e8453',
+                subject: 'رسالة جديدة من صفحة اتصل بنا',
+                'الاسم': form.name,
+                'اسم المنظمة / الجمعية': form.organization || 'غير محدد',
+                'رقم الجوال': form.phone,
+                'البريد الإلكتروني': form.email,
+                'الخدمة المطلوبة': form.service || 'غير محدد',
+                'نص الرسالة': form.message
+            })
+        })
+
+        const result = await response.json()
+
+        if (result.success) {
+            submitted.value = true
+            form.name = ''
+            form.organization = ''
+            form.phone = ''
+            form.email = ''
+            form.service = ''
+            form.message = ''
+        } else {
+            errorMessage.value = 'تعذر إرسال الرسالة، يرجى المحاولة مرة أخرى.'
+        }
+    } catch (error) {
+        errorMessage.value = 'حدث خطأ في الاتصال بالشبكة، يرجى التحقق من اتصالك.'
+    } finally {
         isSubmitting.value = false
-        submitted.value = true
-        form.name = ''
-        form.organization = ''
-        form.phone = ''
-        form.email = ''
-        form.service = ''
-        form.message = ''
-    }, 1000)
+    }
 }
 </script>

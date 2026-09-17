@@ -45,7 +45,7 @@
           </div>
           <div class="w-px h-4 bg-medical-navy/10 hidden sm:block"></div>
           <div class="hidden sm:flex items-center gap-2.5 text-sm text-medical-navy/80">
-            <span class="font-medium">info@nahg.com.sa</span>
+            <span class="font-medium">nahjaltanfith@gmail.com</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-medical-navy">
               <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

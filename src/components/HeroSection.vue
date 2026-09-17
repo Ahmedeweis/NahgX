@@ -39,9 +39,8 @@
                 </span>
               </h1>
 
-              <!-- Subtitle -->
               <p
-                class="text-sm sm:text-base lg:text-lg font-medium text-gray-700 leading-relaxed sm:leading-[1.9] w-full text-right">
+                class="text-sm sm:text-base lg:text-lg font-medium text-gray-800 sm:text-gray-700 leading-relaxed  w-full text-right bg-white/75 sm:bg-transparent  p-3 sm:p-0 rounded-lg">
                 فريق متخصص نقدم أفضل الخدمات الاستراتيجية لضمان التمكين
                 <br class="hidden sm:block">
                 والاستدامة وفق معايير المركز الوطني لتنمية القطاع غير الربحي
@@ -66,7 +65,7 @@
                 </button>
 
                 <!-- Secondary CTA -->
-                <router-link to="/services" style="background-color: white;"
+                <router-link to="/portfolio" style="background-color: white;"
                   class="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-medical-navy-deep font-bold rounded-xl border-2 border-medical-navy/15 shadow-sm transition-all duration-300 hover:border-medical-blue hover:bg-medical-sky-light hover:-translate-y-0.5 active:translate-y-0 text-sm sm:text-[15px]">
                   <span>سابقة الأعمال</span>
                   <svg class="text-medical-navy-deep transition-transform duration-200 group-hover:-translate-x-1"
@@ -100,7 +99,7 @@
                   </div>
                   <span
                     class="inline-flex items-center gap-1 text-xs font-bold text-medical-blue bg-medical-sky px-2.5 py-1.5 rounded-lg flex-shrink-0">
-                    <span>فتح المودال</span>
+
                     <svg class="w-3.5 h-3.5 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <path d="M9 5l7 7-7 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>

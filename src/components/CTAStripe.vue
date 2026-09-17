@@ -53,44 +53,46 @@
               </div>
 
               <!-- Rocket SVG -->
-              <div class="absolute bottom-2 right-4 w-[38%] aspect-square rotate-[5deg] flex items-center justify-center">
-                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+              <div
+                class="absolute bottom-2 right-4 w-[38%] aspect-square rotate-[5deg] flex items-center justify-center">
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full drop-shadow-lg">
                   <!-- Glow circle background -->
-                  <circle cx="60" cy="60" r="52" fill="url(#ctaGlow)" opacity="0.18"/>
+                  <circle cx="60" cy="60" r="52" fill="url(#ctaGlow)" opacity="0.18" />
                   <!-- Rocket body -->
                   <path d="M60 18C60 18 38 38 38 62C38 72 44 80 52 84L60 88L68 84C76 80 82 72 82 62C82 38 60 18 60 18Z"
-                    fill="url(#rocketBody)" stroke="#0B3D91" stroke-width="2"/>
+                    fill="url(#rocketBody)" stroke="#0B3D91" stroke-width="2" />
                   <!-- Window -->
-                  <circle cx="60" cy="56" r="9" fill="white" stroke="#0B3D91" stroke-width="2"/>
-                  <circle cx="60" cy="56" r="5.5" fill="url(#windowGrad)"/>
+                  <circle cx="60" cy="56" r="9" fill="white" stroke="#0B3D91" stroke-width="2" />
+                  <circle cx="60" cy="56" r="5.5" fill="url(#windowGrad)" />
                   <!-- Left fin -->
-                  <path d="M38 74L28 86L42 82Z" fill="#0B3D91" opacity="0.7"/>
+                  <path d="M38 74L28 86L42 82Z" fill="#0B3D91" opacity="0.7" />
                   <!-- Right fin -->
-                  <path d="M82 74L92 86L78 82Z" fill="#0B3D91" opacity="0.7"/>
+                  <path d="M82 74L92 86L78 82Z" fill="#0B3D91" opacity="0.7" />
                   <!-- Flame -->
-                  <ellipse cx="60" cy="92" rx="8" ry="12" fill="url(#flameGrad)" opacity="0.9"/>
-                  <ellipse cx="60" cy="96" rx="4.5" ry="7" fill="#FFF176" opacity="0.85"/>
+                  <ellipse cx="60" cy="92" rx="8" ry="12" fill="url(#flameGrad)" opacity="0.9" />
+                  <ellipse cx="60" cy="96" rx="4.5" ry="7" fill="#FFF176" opacity="0.85" />
                   <!-- Stars -->
-                  <circle cx="25" cy="32" r="2" fill="#0B3D91" opacity="0.4"/>
-                  <circle cx="95" cy="28" r="1.5" fill="#0B3D91" opacity="0.3"/>
-                  <circle cx="18" cy="58" r="1.2" fill="#0B3D91" opacity="0.25"/>
-                  <circle cx="100" cy="55" r="1.8" fill="#0B3D91" opacity="0.3"/>
+                  <circle cx="25" cy="32" r="2" fill="#0B3D91" opacity="0.4" />
+                  <circle cx="95" cy="28" r="1.5" fill="#0B3D91" opacity="0.3" />
+                  <circle cx="18" cy="58" r="1.2" fill="#0B3D91" opacity="0.25" />
+                  <circle cx="100" cy="55" r="1.8" fill="#0B3D91" opacity="0.3" />
                   <defs>
                     <linearGradient id="ctaGlow" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#0B3D91"/>
-                      <stop offset="1" stop-color="#4FC3F7"/>
+                      <stop stop-color="#0B3D91" />
+                      <stop offset="1" stop-color="#4FC3F7" />
                     </linearGradient>
                     <linearGradient id="rocketBody" x1="40" y1="18" x2="80" y2="88" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#E3F2FD"/>
-                      <stop offset="1" stop-color="#90CAF9"/>
+                      <stop stop-color="#E3F2FD" />
+                      <stop offset="1" stop-color="#90CAF9" />
                     </linearGradient>
                     <linearGradient id="windowGrad" x1="55" y1="51" x2="65" y2="61" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#4FC3F7"/>
-                      <stop offset="1" stop-color="#0B3D91"/>
+                      <stop stop-color="#4FC3F7" />
+                      <stop offset="1" stop-color="#0B3D91" />
                     </linearGradient>
                     <linearGradient id="flameGrad" x1="60" y1="80" x2="60" y2="104" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#FF6F00"/>
-                      <stop offset="1" stop-color="#FFCA28"/>
+                      <stop stop-color="#FF6F00" />
+                      <stop offset="1" stop-color="#FFCA28" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -127,7 +129,8 @@
               </p>
             </div>
 
-            <button
+            <!-- الزر بنفس تصميمه، يفتح النافذة المنبثقة -->
+            <button @click="isModalOpen = true" type="button"
               class="group relative inline-flex items-center gap-2.5 px-7 sm:px-8 py-4 bg-medical-navy-deep hover:bg-medical-navy text-white font-bold rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card-md active:translate-y-0 shrink-0">
               <span class="relative z-10 text-[15px] whitespace-nowrap">احجز موعداً الآن</span>
               <svg class="relative z-10" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -144,10 +147,127 @@
         </div>
       </div>
     </div>
+
+    <!-- Booking Modal -->
+    <Teleport to="body">
+      <div v-if="isModalOpen"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" dir="rtl"
+        @click.self="closeModal">
+        <div
+          class="relative w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100 animate-fadeIn text-right">
+
+          <!-- Close Button -->
+          <button type="button" @click="closeModal"
+            class="absolute top-4 left-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-700 transition">
+            ✕
+          </button>
+
+          <h4 class="text-xl font-bold text-gray-900 mb-2">حجز جلسة استشارية</h4>
+          <p class="text-sm text-gray-500 mb-6">أدخل بياناتك وسنتواصل معك لتأكيد الموعد.</p>
+
+          <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1">الاسم</label>
+              <input v-model="form.name" type="text" required placeholder="الاسم بالكامل"
+                class="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-blue-600 transition" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1">رقم الهاتف / واتساب</label>
+              <input v-model="form.phone" type="tel" required placeholder="05xxxxxxxxx / 01xxxxxxxxx"
+                class="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-blue-600 transition" />
+            </div>
+
+            <p v-if="statusMessage" :class="isSuccess ? 'text-emerald-600' : 'text-rose-600'"
+              class="text-sm font-medium text-center">
+              {{ statusMessage }}
+            </p>
+
+            <button type="submit" :disabled="isLoading"
+              class="w-full py-3.5 mt-2 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow transition disabled:opacity-50">
+              {{ isLoading ? 'جاري الإرسال...' : 'تأكيد الحجز' }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </Teleport>
   </section>
 </template>
 
 <script setup>
+import { reactive, ref } from 'vue'
+
+const isModalOpen = ref(false)
+const isLoading = ref(false)
+const statusMessage = ref('')
+const isSuccess = ref(false)
+
+const form = reactive({
+  name: '',
+  phone: ''
+})
+
+const closeModal = () => {
+  isModalOpen.value = false
+  statusMessage.value = ''
+}
+
+const handleSubmit = async () => {
+  isLoading.value = true
+  statusMessage.value = ''
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: 'a7841c52-dc40-485f-8abb-b67ae60e8453',
+        subject: 'طلب حجز جلسة استشارية جديدة (من قسم الـ CTA)',
+        'الاسم': form.name,
+        'رقم الهاتف / واتساب': form.phone
+      })
+    })
+
+    const result = await response.json()
+
+    if (result.success) {
+      isSuccess.value = true
+      statusMessage.value = 'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.'
+      form.name = ''
+      form.phone = ''
+      setTimeout(() => {
+        closeModal()
+      }, 2000)
+    } else {
+      isSuccess.value = false
+      statusMessage.value = 'حدث خطأ، برجاء المحاولة مرة أخرى.'
+    }
+  } catch (error) {
+    isSuccess.value = false
+    statusMessage.value = 'تعذر الاتصال بالخادم، تحقق من اتصال الإنترنت.'
+  } finally {
+    isLoading.value = false
+  }
+}
 </script>
 
-<style scoped></style>
+<style scoped>
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+</style>
