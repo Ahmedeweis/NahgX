@@ -11,7 +11,7 @@
 
                     <!-- 1. Wide Horizontal Project Card (6 Columns on Desktop) -->
                     <div
-                        class="md:col-span-2 lg:col-span-6 flex flex-col sm:flex-row border-[2px] border-[#201F2B] bg-white rounded-2xl overflow-hidden min-h-[380px]">
+                        class="md:col-span-2 lg:col-span-6 flex flex-col sm:flex-row border-[2px] border-[#201F2B] bg-white rounded-2xl overflow-hidden min-h-[300px]">
                         <!-- Content Side -->
                         <div
                             class="w-full sm:w-1/2 p-6 sm:p-8 flex flex-col justify-between border-b sm:border-b-0 sm:border-l border-black">
@@ -28,12 +28,12 @@
                             </div>
                             <a :href="section1Data.featured.link"
                                 class="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-medical-blue transition-colors group select-none">
-                                <span>{{ section1Data.featured.linkText }}</span>
-                                <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
+                                <!-- <span>{{ section1Data.featured.linkText }}</span> -->
+                                <!-- <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M9 5l7 7-7 7" />
-                                </svg>
+                                </svg> -->
                             </a>
                         </div>
 
@@ -43,11 +43,11 @@
                             <img v-if="section1Data.featured.image" :src="section1Data.featured.image"
                                 :alt="section1Data.featured.title" class="w-full h-full object-cover" />
                             <div v-else class="flex items-center justify-center w-full h-full p-6">
-                                <svg class="w-20 h-20 sm:w-24 sm:h-24 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
+                                <!-- <svg class="w-20 h-20 sm:w-24 sm:h-24 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
                                     <rect width="80" height="80" rx="16" fill="currentColor" />
                                     <circle cx="28" cy="28" r="6" fill="#E5E7EB" />
                                     <path d="M16 62L36 38L48 52L58 40L68 62H16Z" fill="#E5E7EB" />
-                                </svg>
+                                </svg> -->
                             </div>
                         </div>
                     </div>
@@ -70,12 +70,12 @@
                             </div>
                             <a :href="item.link"
                                 class="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-medical-blue transition-colors group select-none">
-                                <span>{{ item.linkText }}</span>
-                                <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
+                                <!-- <span>{{ item.linkText }}</span> -->
+                                <!-- <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M9 5l7 7-7 7" />
-                                </svg>
+                                </svg> -->
                             </a>
                         </div>
 
@@ -85,11 +85,11 @@
                             <img v-if="item.image" :src="item.image" :alt="item.title"
                                 class="w-full h-full object-cover" />
                             <div v-else class="flex items-center justify-center w-full h-full p-4">
-                                <svg class="w-16 h-16 sm:w-20 sm:h-20 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
+                                <!-- <svg class="w-16 h-16 sm:w-20 sm:h-20 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
                                     <rect width="80" height="80" rx="16" fill="currentColor" />
                                     <circle cx="28" cy="28" r="6" fill="#E5E7EB" />
                                     <path d="M16 62L36 38L48 52L58 40L68 62H16Z" fill="#E5E7EB" />
-                                </svg>
+                                </svg> -->
                             </div>
                         </div>
                     </div>
@@ -119,12 +119,16 @@
                             </div>
                             <a :href="item.link"
                                 class="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-medical-blue transition-colors group select-none">
-                                <span>{{ item.linkText }}</span>
-                                <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
+                                <!-- <span>{{ item.linkText }}</span> -->
+                                <!-- <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M9 5l7 7-7 7" />
-                                </svg>
+                                </svg>                 <!-- <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M9 5l7 7-7 7" />
+                                </svg> -->
                             </a>
                         </div>
 
@@ -134,11 +138,11 @@
                             <img v-if="item.image" :src="item.image" :alt="item.title"
                                 class="w-full h-full object-cover" />
                             <div v-else class="flex items-center justify-center w-full h-full p-4">
-                                <svg class="w-16 h-16 sm:w-20 sm:h-20 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
+                                <!-- <svg class="w-16 h-16 sm:w-20 sm:h-20 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
                                     <rect width="80" height="80" rx="16" fill="currentColor" />
                                     <circle cx="28" cy="28" r="6" fill="#E5E7EB" />
                                     <path d="M16 62L36 38L48 52L58 40L68 62H16Z" fill="#E5E7EB" />
-                                </svg>
+                                </svg> -->
                             </div>
                         </div>
                     </div>
@@ -162,12 +166,12 @@
                             </div>
                             <a :href="section2Data.featured.link"
                                 class="inline-flex items-center gap-2 text-sm font-bold text-black hover:text-medical-blue transition-colors group select-none">
-                                <span>{{ section2Data.featured.linkText }}</span>
-                                <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
+                                <!-- <span>{{ section2Data.featured.linkText }}</span> -->
+                                <!-- <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M9 5l7 7-7 7" />
-                                </svg>
+                                </svg> -->
                             </a>
                         </div>
 
@@ -177,11 +181,11 @@
                             <img v-if="section2Data.featured.image" :src="section2Data.featured.image"
                                 :alt="section2Data.featured.title" class="w-full h-full object-cover" />
                             <div v-else class="flex items-center justify-center w-full h-full p-6">
-                                <svg class="w-20 h-20 sm:w-24 sm:h-24 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
+                                <!-- <svg class="w-20 h-20 sm:w-24 sm:h-24 text-[#9CA3AF]" viewBox="0 0 80 80" fill="none">
                                     <rect width="80" height="80" rx="16" fill="currentColor" />
                                     <circle cx="28" cy="28" r="6" fill="#E5E7EB" />
                                     <path d="M16 62L36 38L48 52L58 40L68 62H16Z" fill="#E5E7EB" />
-                                </svg>
+                                </svg> -->
                             </div>
                         </div>
                     </div>
@@ -203,12 +207,12 @@ import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 import sectionHeader from '@/components/sectionHeader.vue'
 
-import img1 from '../assets/imgs/portfolio/project1.jpg'
-import img2 from '../assets/imgs/portfolio/project2.jpg'
-import img3 from '../assets/imgs/portfolio/project3.jpg'
-import img4 from '../assets/imgs/portfolio/project4.jpg'
-import img5 from '../assets/imgs/portfolio/project5.jpg'
-import img6 from '../assets/imgs/portfolio/project6.jpg'
+import img1 from '../assets/imgs/portfolio/project1.png'
+import img2 from '../assets/imgs/portfolio/project2.png'
+import img3 from '../assets/imgs/portfolio/project3.png'
+import img4 from '../assets/imgs/portfolio/project4.png'
+import img5 from '../assets/imgs/portfolio/project5.png'
+import img6 from '../assets/imgs/portfolio/project6.png'
 
 const bannerTitle = "سابقة الأعمال والإنجازات";
 const bannerPageTitle = "سابقة الأعمال والإنجازات";
