@@ -9,7 +9,7 @@
         <div
           class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-medical-accent-light/8 blur-3xl pointer-events-none">
         </div>
-        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-1">
+        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-1">
           <!-- Feature 1 -->
           <div
             class="relative group flex items-center gap-4  rounded-2xl transition-all duration-300 hover:bg-medical-sky-light/50">
