@@ -34,7 +34,7 @@
                                 <h3 class="text-xl font-bold text-[#334155] mb-2 leading-snug">
                                     {{ phase.title }}
                                 </h3>
-                                <p class="text-[#64748B] leading-relaxed text-sm">
+                                <p class="text-[#64748B] leading-relaxed text-lg">
                                     {{ phase.description }}
                                 </p>
                             </div>

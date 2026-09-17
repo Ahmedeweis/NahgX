@@ -9,7 +9,7 @@
           </div>
           <div class="flex flex-col leading-tight">
             <span class="text-xl font-bold text-medical-navy-deep tracking-tight">نهج التنفيذ </span>
-            <span class="text-[13px] font-bold text-black mt-0.5">تمكين واستدامة القطاع الثالث السعودي</span>
+            <span class="text-[13px] font-bold text-black mt-0.5">تمكين واستدامة القطاع الغير الربحي </span>
           </div>
         </router-link>
 
