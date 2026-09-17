@@ -5,7 +5,7 @@
         <div class="flex items-center gap-4">
           <div class="flex flex-row-reverse items-center gap-3.5">
             <!-- WhatsApp -->
-            <a href="https://wa.me/201234567890" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/+966580762699" target="_blank" rel="noopener noreferrer"
               class="text-medical-navy/70 hover:text-medical-navy transition-colors duration-200" title="WhatsApp">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
                 <path
