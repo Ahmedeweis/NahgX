@@ -14,17 +14,22 @@ const routes = [
     path: '/about',
     name: 'about',
     component: () => import('../views/about.vue')
-  }
+  },
+  {
+    path: '/portfolio',
+    name: 'portfolio',
+    component: () => import('../views/portfolio.vue')
+  },
   // {
   //   path: '/projects',
   //   name: 'projects',
   //   component: () => import('../views/ProjectsView.vue')
   // },
-  // {
-  //   path: '/contact',
-  //   name: 'contact',
-  //   component: () => import('../views/ContactView.vue')
-  // }
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/contact.vue')
+  }
 ]
 const router = createRouter({
   history: createWebHistory(),

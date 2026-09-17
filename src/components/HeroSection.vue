@@ -23,7 +23,6 @@
               <!-- Badge -->
               <div
                 class="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-white/90 backdrop-blur border border-medical-blue-light/30 shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span class="text-xs sm:text-sm font-bold text-medical-navy-deep">نحو قطاع ثالث مستدام وفق رؤية
                   2030</span>
               </div>
