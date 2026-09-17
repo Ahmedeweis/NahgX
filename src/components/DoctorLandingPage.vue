@@ -7,15 +7,17 @@
       <sectionHeader :title="bannerTitle" :pageTitle="bannerPageTitle" :description="bannerDescription" />
       <ServicesGrid />
       <CTAStripe />
+      <Footer />
     </main>
   </div>
 </template>
 <script setup>
 import TopBar from './TopBar.vue'
 import Navbar from './Navbar.vue'
-import sectionHeader from './sectionHeader.vue';
+import sectionHeader from './sectionHeader.vue'
 import ServicesGrid from './ServicesGrid.vue'
 import CTAStripe from './CTAStripe.vue'
+import Footer from './Footer.vue'
 
 </script>
 <style scoped></style>
