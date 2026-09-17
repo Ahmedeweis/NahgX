@@ -1,5 +1,7 @@
 <template>
-    <section class="w-full bg-white py-16 sm:py-20 lg:py-24 font-sans" :dir="dir">
+    <section
+        class="w-full bg-gradient-to-l from-medical-sky via-medical-sky-light/80 to-white py-16 sm:py-20 lg:py-24 font-sans"
+        :dir="dir">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -82,27 +84,27 @@
 defineProps({
     title: {
         type: String,
-        default: 'Code Anywhere with Interactive Playground'
+        default: 'شريكك الاستراتيجي لتمكين واستدامة القطاع غير الربحي'
     },
     description: {
         type: String,
-        default: 'Practice coding instantly in your browser without complex setup. Experiment with multiple programming languages and see results in real-time.'
+        default: 'نعمل جنباً إلى جنب مع قيادات الجمعيات والمؤسسات الأهلية لتطبيق أعلى معايير الحوكمة والامتثال، وصياغة خطط استراتيجية مستدامة تضمن تعظيم الأثر المجتمعي ومواكبة مستهدفات رؤية المملكة 2030.'
     },
     primaryBtnText: {
         type: String,
-        default: 'Try Playground'
+        default: 'احجز جلسة استكشافية'
     },
     primaryBtnLink: {
         type: String,
-        default: '#'
+        default: '#consultation'
     },
     secondaryBtnText: {
         type: String,
-        default: 'Learn More'
+        default: 'تعرف على خدماتنا'
     },
     secondaryBtnLink: {
         type: String,
-        default: '#'
+        default: '#services'
     },
     imageSrc: {
         type: String,
@@ -110,7 +112,7 @@ defineProps({
     },
     imageAlt: {
         type: String,
-        default: 'صورة توضيحية'
+        default: 'عن شركة نهج التنفيذ'
     },
     showIcon: {
         type: Boolean,
@@ -118,7 +120,7 @@ defineProps({
     },
     dir: {
         type: String,
-        default: 'ltr'
+        default: 'rtl'
     },
     // Backward compatibility prop
     pageTitle: {

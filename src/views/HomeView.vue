@@ -21,7 +21,7 @@ import FeaturesSection from '../components/FeaturesSection.vue'
 import PortfolioSection from '../components/PortfolioSection.vue'
 import InvoiceeFuture from '../components/InvoiceeFuture.vue'
 import WhyAiAgents from '../components/WhyAiAgents.vue'
-import Footer from '../components/footer.vue'
+import Footer from '../components/Footer.vue'
 
 </script>
 <style scoped></style>
