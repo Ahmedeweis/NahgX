@@ -25,7 +25,8 @@
                     </h1>
 
                     <!-- Description -->
-                    <p v-if="description" class="text-medical-navy/80 text-base sm:text-[17px] leading-relaxed mb-8 sm:mb-10 font-normal">
+                    <p v-if="description"
+                        class="text-medical-navy/80 text-base sm:text-[17px] leading-relaxed mb-8 sm:mb-10 font-normal">
                         {{ description }}
                     </p>
 
@@ -42,8 +43,8 @@
                             class="inline-flex items-center gap-2 text-medical-navy-deep hover:text-medical-blue font-bold text-sm sm:text-base transition-colors group cursor-pointer select-none">
                             <span>{{ secondaryBtnText }}</span>
                             <svg class="w-4 h-4 text-medical-navy-deep group-hover:text-medical-blue transition-all duration-200"
-                                :class="{ 'rotate-180 group-hover:-translate-x-1': dir === 'rtl', 'group-hover:translate-x-1': dir !== 'rtl' }" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
+                                :class="{ 'rotate-180 group-hover:-translate-x-1': dir === 'rtl', 'group-hover:translate-x-1': dir !== 'rtl' }"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                     d="M9 5l7 7-7 7" />
                             </svg>
@@ -98,7 +99,7 @@ defineProps({
     },
     primaryBtnLink: {
         type: String,
-        default: '#consultation'
+        default: '/'
     },
     secondaryBtnText: {
         type: String,
@@ -106,7 +107,7 @@ defineProps({
     },
     secondaryBtnLink: {
         type: String,
-        default: '#services'
+        default: '/services'
     },
     imageSrc: {
         type: String,

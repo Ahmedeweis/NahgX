@@ -1,10 +1,7 @@
 <template>
     <footer class="relative overflow-hidden font-sans text-gray-200 bg-[#000d24] px-4 py-10 sm:px-8 md:px-12 md:py-16"
         dir="rtl">
-        <!-- Top Blue Glow Effect -->
-        <div
-            class="pointer-events-none absolute top-0 left-1/2 h-[200px] w-full -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,_#0EA4FB_0%,_transparent_60%)] opacity-30">
-        </div>
+
 
         <div class="container relative z-10 mx-auto max-w-7xl">
             <!-- Main Content Grid -->

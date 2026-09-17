@@ -6,6 +6,7 @@
             <Navbar />
             <sectionHeader :title="bannerTitle" :pageTitle="bannerPageTitle" :description="bannerDescription" />
             <aboutStyle />
+            <Footer />
         </main>
     </div>
 </template>
@@ -14,6 +15,7 @@ import TopBar from '@/components/TopBar.vue'
 import Navbar from '@/components/Navbar.vue'
 import sectionHeader from '@/components/sectionHeader.vue';
 import aboutStyle from '@/components/about-style.vue'
+import Footer from '@/components/Footer.vue'
 
 const bannerTitle = "شريكك التقني ";
 const bannerPageTitle = "من نحن";
