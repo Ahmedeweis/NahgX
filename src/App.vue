@@ -6,20 +6,20 @@
         <div class="w-16 h-16 border-4 border-white/20 border-t-brand-primary rounded-full animate-spin"></div>
     </div>
 
-    <div class="app-content min-h-screen flex flex-col lang-en">
+    <div class="app-content min-h-screen flex flex-col" dir="rtl">
         <main class="flex-grow flex flex-col">
             <router-view />
         </main>
 
     </div>
     <!-- </div> -->
-    <ScrollToTop />
+    <!-- <ScrollToTop /> -->
 </template>
 
 <script setup>
 import { ref } from 'vue'
 // import Footer from './components/Footer.vue'
-import ScrollToTop from './components/ScrollToTop.vue'
+// import ScrollToTop from './components/ScrollToTop.vue'
 const isLoading = ref(false)
 
 
